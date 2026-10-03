@@ -1,0 +1,52 @@
+.aku {
+    display: flex;
+    justify-content: center;
+    background-color: #0096c7;
+    border-radius: 2rem;
+    color: #efd8c5;
+}
+
+.konten-perkenalan {
+    background-color: #efd8c5; 
+    border-radius: 2rem; 
+    padding: 2rem;
+}
+
+.link {
+    display: inline-block;
+    padding: 12px 28px;
+    color: #efd8c5;
+    font-size: 16px;
+    text-decoration: none;
+    border: 2px solid #0096c7;
+    border-radius: 2rem;
+    transition: all 0.3s ease;
+
+}
+
+.link:hover {
+    background-color: #efd8c5;
+    color: #0096c7;
+    border-color: #efd8c5;
+    transform: translate(-2px);
+}
+
+.section-link {
+    margin-top: 2rem;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;           
+    height: 100vh;          
+    object-fit: cover;      
+    border-radius: 50%;     
+    border: 3px solid #0096c7; 
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3); 
+    margin: 0;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 2rem;
+}
