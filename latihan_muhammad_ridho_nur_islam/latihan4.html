@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stardew Valley - Modding & Farm Log</title>
+    <link rel="stylesheet" href="latihan4.css">
+</head>
+<body>
+
+<div id="wrapper">
+    <!-- HERO SECTION MULAI -->
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1>Jurnal Pelican Town</h1>
+            <p>Catatan Pertanian, Modding SMAPI, dan Relasi Warga</p>
+            <a href="#mods" class="btn-hero">Mulai Petualangan</a>
+        </div>
+    </header>
+    <!-- HERO SECTION SELESAI -->
+
+    <nav>
+        <a href="#mods">Mod Konfigurasi</a>
+        <a href="#relationships">Relasi</a>
+        <a href="#media">Galeri & Peta</a>
+        <a href="#contact">Form Co-op</a>
+    </nav>
+
+    <main>
+        <section id="mods" class="content-section">
+            <h2 class="section-title">Konfigurasi SMAPI & Mod Aktif</h2>
+            <p>Untuk pengalaman bermain yang optimal, pastikan mod dijalankan melalui terminal dengan pengaturan dependensi yang benar. Berikut daftar mod yang wajib digunakan:</p>
+            <ul>
+                <li><strong>[CP] IndonesianLanguageMod</strong> - Lokalisasi bahasa Indonesia untuk mempermudah dialog.</li>
+                <li><strong>[CP] Portrait Anime Mods OhoDavi</strong> - Mengubah potret karakter warga desa menjadi gaya anime.</li>
+                <li><strong>UI Info Suite</strong> - Menampilkan ikon keberuntungan dan status <span class="highlight-text">mesin artisan</span>.</li>
+            </ul>
+        </section>
+
+        <!-- (Bagian Relasi, Media, dan Form tetap sama seperti sebelumnya) -->
+        <section id="relationships" class="content-section">
+            <h2 class="section-title">Jadwal & Hadiah Warga (Fokus Relasi)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nama Karakter</th>
+                        <th>Hadiah Paling Disukai (Loved)</th>
+                        <th>Status / Catatan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Emily</strong></td>
+                        <td>Kain (Cloth), Batu Kecubung (Amethyst), Survival Burger</td>
+                        <td>Menikah (Wife). Sering berada di Saloon pada malam hari.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Linus</strong></td>
+                        <td>Ubi (Yam), Kelapa (Coconut), Blueberry Tart</td>
+                        <td>Teman baik. Tinggal di tenda dekat tambang.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Gus</strong></td>
+                        <td>Jeruk (Orange), Taco Ikan (Fish Taco)</td>
+                        <td>Pemilik Stardrop Saloon.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="media" class="content-section">
+            <h2 class="section-title">Media Penjelajahan</h2>
+            <div class="media-grid">
+                <div class="media-item">
+                    <h3>Trailer Stardew Valley</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Y7j9gk3_Pyo?si=JOCCAUgy0aFwSaG-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="media-item">
+                    <h3>Markas ConcernedApe (Seattle)</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d172138.86800720412!2d-122.4821469503463!3d47.61317462100858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490102c93e83355%3A0x102565466944d59a!2sSeattle%2C%20Washington%2C%20Amerika%20Serikat!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="content-section">
+            <h2 class="section-title">Registrasi Server Co-op</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="username">Nama Karakter (In-game):</label>
+                    <input type="text" id="username" name="username" placeholder="Masukkan nama..." required>
+                </div>
+                
+                <div class="form-group">
+                    <p class="form-label">Keahlian Utama:</p>
+                    <input type="radio" id="skill_farm" name="skill" value="farming" checked> 
+                    <label for="skill_farm" class="inline-label">Farming</label>
+                    
+                    <input type="radio" id="skill_mine" name="skill" value="mining"> 
+                    <label for="skill_mine" class="inline-label">Mining / Combat</label>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Pesan / Salam Perkenalan:</label>
+                    <textarea id="message" name="message" rows="3" placeholder="Halo, saya siap bantu menyiram tanaman..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Kirim Permintaan Bergabung</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Latihan Kelas | Dibuat oleh Muhammad Ridho Nur Islam</p>
+    </footer>
+</div>
+
+</body>
+</html>

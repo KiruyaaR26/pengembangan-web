@@ -1,0 +1,189 @@
+/* CSS Reset & Global Styles */
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+
+body { 
+    font-family: 'Helvetica Neue', Arial, sans-serif; 
+    background-color: #0d1117; 
+    color: #c9d1d9; 
+    margin: 0; 
+}
+
+/* --- HERO SECTION ANIME --- */
+.hero-anime {
+    background: linear-gradient(to bottom, rgba(13, 17, 23, 0.2), #0d1117), 
+                url('https://images.unsplash.com/photo-1613376023733-0a73315d9b06?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-bottom: 1px solid #30363d;
+}
+
+.hero-content-anime h1 { 
+    color: #58a6ff; 
+    font-size: 3.5em; 
+    text-transform: uppercase; 
+    letter-spacing: 3px; 
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8); 
+    margin-bottom: 10px; 
+}
+
+.hero-content-anime p { 
+    font-size: 1.2em; 
+    font-weight: 300; 
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.8); 
+    color: #e6edf3; 
+}
+
+/* Layout Grid */
+#main-container { 
+    max-width: 1050px; 
+    margin: -50px auto 20px; 
+    padding: 0 20px; 
+    display: grid; 
+    grid-template-columns: 2fr 1fr; 
+    gap: 20px; 
+    position: relative; 
+    z-index: 10; 
+}
+
+/* Kartu Konten */
+.card { 
+    background: #161b22; 
+    border: 1px solid #30363d; 
+    border-radius: 8px; 
+    padding: 20px; 
+    margin-bottom: 20px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5); 
+}
+
+.card-title { 
+    font-size: 1.5em; 
+    margin-bottom: 15px; 
+    color: #fff; 
+    border-bottom: 1px solid #30363d; 
+    padding-bottom: 5px; 
+}
+
+/* Daftar Genre */
+.genre-list { 
+    margin-left: 20px; 
+    line-height: 1.8; 
+}
+
+.genre-highlight { 
+    font-weight: bold; 
+    color: #58a6ff; 
+}
+
+/* Tabel */
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+}
+
+th, td { 
+    border-bottom: 1px solid #30363d; 
+    padding: 15px 12px; 
+    text-align: left; 
+}
+
+th { 
+    color: #8b949e; 
+    text-transform: uppercase; 
+    font-size: 0.85em; 
+}
+
+td { 
+    font-weight: 500; 
+}
+
+.status-badge { 
+    background: #238636; 
+    color: white; 
+    padding: 4px 10px; 
+    border-radius: 12px; 
+    font-size: 0.8em; 
+}
+
+.status-badge.ongoing { 
+    background: #d29922; 
+}
+
+/* Media Embed */
+.media-desc { 
+    font-size: 0.85em; 
+    margin-bottom: 10px; 
+    color: #8b949e; 
+}
+
+iframe { 
+    width: 100%; 
+    height: 200px; 
+    border-radius: 5px; 
+    border: none; 
+    margin-bottom: 15px; 
+}
+
+/* Formulir */
+.form-group { 
+    margin-bottom: 15px; 
+}
+
+label { 
+    display: block; 
+    margin-bottom: 5px; 
+    color: #8b949e; 
+    font-size: 0.9em; 
+}
+
+input[type="text"], 
+input[type="number"] { 
+    width: 100%; 
+    padding: 12px; 
+    border-radius: 5px; 
+    border: 1px solid #30363d; 
+    background: #0d1117; 
+    color: #c9d1d9; 
+}
+
+.submit-btn { 
+    width: 100%; 
+    background: #58a6ff; 
+    color: #0d1117; 
+    font-weight: bold; 
+    padding: 12px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: 0.3s; 
+    margin-top: 10px; 
+}
+
+.submit-btn:hover { 
+    background: #79c0ff; 
+}
+
+/* Footer */
+footer { 
+    text-align: center; 
+    padding: 20px; 
+    border-top: 1px solid #30363d; 
+    margin-top: 40px; 
+    font-size: 0.9em; 
+    color: #8b949e; 
+    background: #161b22; 
+}
+
+/* Responsif untuk layar kecil / tablet */
+@media (max-width: 768px) {
+    #main-container { 
+        grid-template-columns: 1fr; 
+        margin-top: 20px; 
+    }
+}

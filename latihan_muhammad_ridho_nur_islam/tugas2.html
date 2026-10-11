@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Hub - Personal Watchlist</title>
+    <link rel="stylesheet" href="tugas2.css">
+</head>
+<body>
+
+    <!-- HERO SECTION MULAI -->
+    <header class="hero-anime" id="top-header">
+        <div class="hero-content-anime">
+            <h1>Anime Hub Tracker</h1>
+            <p>Eksplorasi Dunia, Catat Progres, & Temukan Rekomendasi</p>
+        </div>
+    </header>
+    <!-- HERO SECTION SELESAI -->
+
+    <div id="main-container">
+        <main>
+            <section class="card">
+                <h2 class="card-title">My Watchlist (Musim Panas)</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Judul Anime</th>
+                            <th>Progress</th>
+                            <th>Rating</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Frieren: Beyond Journey's End</td>
+                            <td>Ep 28 / 28</td>
+                            <td>10/10</td>
+                            <td><span class="status-badge">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>Dungeon Meshi</td>
+                            <td>Ep 12 / 24</td>
+                            <td>9/10</td>
+                            <td><span class="status-badge ongoing">Ongoing</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="card">
+                <h2 class="card-title">Top 3 Genre Favorit</h2>
+                <ol class="genre-list">
+                    <li><span class="genre-highlight">Fantasy / Adventure:</span> Dunia yang luas dengan <em>world-building</em> yang detail.</li>
+                    <li><span class="genre-highlight">Slice of Life:</span> Cerita ringan untuk bersantai setelah coding seharian.</li>
+                    <li><span class="genre-highlight">Sci-Fi / Mecha:</span> Konsep teknologi masa depan dan strategi.</li>
+                </ol>
+            </section>
+        </main>
+
+        <aside>
+            <section class="card">
+                <h2 class="card-title">Media & Info</h2>
+                <p class="media-desc">PV Trailer Anime of the Year:</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/dot_dEb9LT4?si=I71KU7dPUyOf_m21" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p class="media-desc">Titik Pusat Budaya Anime (Akihabara):</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12960.916174092474!2d139.7617637840134!3d35.69835702209772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c1d51a66a1f%3A0x6e2454a8e23927!2sAkihabara%2C%20Taito%20City%2C%20Tokyo%2C%20Jepang!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" loading="lazy"></iframe>
+            </section>
+
+            <section class="card">
+                <h2 class="card-title">Tambah Data</h2>
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="judul">Judul Anime:</label>
+                        <input type="text" id="judul" name="judul" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="episode">Total Episode:</label>
+                        <input type="number" id="episode" name="episode" min="1" max="1000">
+                    </div>
+
+                    <button type="submit" class="submit-btn">Simpan ke Database</button>
+                </form>
+            </section>
+        </aside>
+    </div>
+
+    <footer>
+        <p>Tugas Mandiri (Di Rumah) &copy; 2026 | Muhammad Ridho Nur Islam | Ilmu Perpustakaan dan Kearsipan</p>
+    </footer>
+
+</body>
+</html>
