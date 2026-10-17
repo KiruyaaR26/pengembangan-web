@@ -1,0 +1,103 @@
+/* CSS Comments: Desain bergaya Fandom Wiki */
+
+/* CSS Syntax & Element Selector */
+body {
+    background-color: #0e0e0e; /* CSS Background */
+    color: #d5d5d5; /* CSS Colors */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0; /* CSS Margins */
+    padding: 0; /* CSS Padding */
+}
+
+/* ID Selector */
+#global-nav {
+    background-color: #1a1a1a;
+    border-bottom: 2px solid #333; /* CSS Borders */
+    height: 50px; /* CSS Height */
+}
+
+.nav-content {
+    padding: 15px 20px;
+    font-weight: bold;
+    color: #faebd7;
+}
+
+#wiki-container {
+    width: 90%; /* CSS Width */
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex; /* Membagi layout menjadi 2 kolom */
+    gap: 30px;
+}
+
+/* Class Selector */
+.main-content {
+    width: 70%; /* CSS Width */
+}
+
+.page-title {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.title-divider {
+    border: 0;
+    height: 1px;
+    background-color: #444;
+    margin-bottom: 20px;
+}
+
+.wiki-section {
+    margin-bottom: 25px;
+}
+
+.wiki-section h2 {
+    color: #e04b4b; /* Aksen merah Valstrax */
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+}
+
+/* Styling untuk Sidebar (Infobox) */
+.wiki-infobox {
+    width: 30%; /* CSS Width */
+    background-color: #1a1a1a;
+    border: 1px solid #333; /* CSS Borders */
+    border-radius: 5px;
+    padding: 15px; /* CSS Padding */
+    height: max-content; /* CSS Height */
+}
+
+.infobox-title {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    margin: -15px -15px 15px -15px; /* Margin negatif untuk menutupi border padding atas */
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.infobox-image {
+    background-color: #222;
+    height: 200px; /* CSS Height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    border: 1px dashed #444;
+    margin-bottom: 15px;
+}
+
+.infobox-data p {
+    margin-bottom: 8px;
+    border-bottom: 1px solid #2a2a2a;
+    padding-bottom: 5px;
+}
+
+.infobox-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Menjaga rasio gambar agar proporsional tanpa gepeng */
+    border-radius: 8px; /* Menyesuaikan lengkungan dengan portrait-box */
+}

@@ -1,0 +1,468 @@
+html {
+    scroll-behavior: smooth;
+}
+
+#holo-nav {
+    background-color: #ffffff;
+    height: 60px;
+    border-bottom: 2px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between; /* Menjauhkan logo dan menu navigasi */
+    align-items: center;
+    padding: 0 40px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    animation: slideDownFade 0.8s ease-out 2.5s both;
+}
+
+/* Styling utama tombol menu navigasi */
+.nav-links a {
+    text-decoration: none; 
+    color: #333333;
+    font-weight: bold;
+    margin-left: 20px; 
+    font-size: 0.95rem;
+    transition: color 0.3s;
+    position: relative; /* PENTING: Menjadi patokan letak garis bawah */
+}
+
+.nav-links a:hover {
+    color: #4fc3f7; 
+}
+
+/* Membuat elemen garis bawah buatan */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px; 
+    left: 0;
+    width: 100%; /* Lebar langsung disetel penuh 100% */
+    height: 2px; 
+    background-color: #4fc3f7; 
+    
+    /* PENTING: Kunci efek meluncur dari tengah */
+    transform: scaleX(0); /* Awalnya garis ditipiskan hingga hilang (skala 0) */
+    transform-origin: center; /* Menetapkan titik pusat pelebaran tepat di tengah */
+    
+    transition: transform 0.3s ease-in-out; /* Animasi berfokus pada perubahan transform */
+}
+
+/* Saat teks di-hover, skala X kembali ke ukuran aslinya (1) */
+.nav-links a:hover::after {
+    transform: scaleX(1);
+}
+
+.talent-profile {
+    display: flex; 
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+    overflow: hidden; 
+    margin-bottom: 50px;
+    scroll-margin-top: 80px; /* Jarak henti scroll dari atas layar */
+
+    animation: slideUpFade 0.8s ease-out 2.8s both;
+}
+body {
+    margin: 0; 
+    padding: 0; 
+    background-color: #f7f9fa; 
+    color: #333333; /* CSS Colors */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#holo-nav {
+    background-color: #ffffff;
+    height: 60px; /* CSS Height */
+    border-bottom: 2px solid #e0e0e0; /* CSS Borders */
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    position: sticky;
+    top: 0; /* Membuat navbar tetap di atas saat di-scroll */
+    z-index: 100;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: #4fc3f7; 
+    letter-spacing: 1px;
+}
+
+.roster-container {
+    width: 85%; /* CSS Width */
+    max-width: 1100px;
+    margin: 50px auto; 
+}
+
+.talent-profile {
+    display: flex; 
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+    overflow: hidden; 
+    margin-bottom: 50px; /* Jarak antar talenta */
+}
+
+/* Class Selector Kustom untuk Warna Tema Setiap Talenta */
+.bg-suisei { background-color: #1e88e5; }
+.bg-sora   { background-color: #42a5f5; }
+.bg-fubuki { background-color: #26c6da; }
+.bg-pekora { background-color: #29b6f6; }
+.bg-marine { background-color: #ef5350; }
+
+.talent-visual {
+    width: 40%; 
+    color: #ffffff;
+    padding: 40px;
+    text-align: center;
+}
+
+.portrait-box {
+    background-color: rgba(255,255,255,0.2);
+    height: 300px; /* CSS Height */
+    border: 2px dashed #ffffff; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.talent-name {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.jp-name {
+    font-size: 1.2rem;
+    font-weight: normal;
+    opacity: 0.8;
+}
+
+.talent-info {
+    width: 60%; 
+    padding: 40px 50px;
+}
+
+.info-section {
+    margin-bottom: 20px; 
+    padding-bottom: 15px; 
+    border-bottom: 1px solid #eeeeee;
+}
+
+.info-section h2 {
+    color: #333333;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.info-section p {
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Tombol Sosial Media */
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px; 
+}
+
+.btn-social {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 0.9rem;
+    padding: 10px 20px;
+    border-radius: 30px; 
+    transition: all 0.3s ease; 
+}
+
+.btn-youtube {
+    background-color: #ff0000;
+}
+
+.btn-twitter {
+    background-color: #0f1419; 
+}
+
+.btn-social:hover {
+    transform: translateY(-3px); 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0.9;
+}
+
+/* =========================================
+   CSS Animations: Splash Screen
+   ========================================= */
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff; /* Latar putih bersih khas UI Hololive */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; /* Memastikan layar ini menutupi seluruh website */
+    
+    /* Animasi fadeOut akan berjalan selama 0.8 detik, setelah jeda 2.5 detik */
+    /* forwards = membuat elemen tetap hilang setelah animasi selesai */
+    animation: fadeOut 0.8s ease-in-out 2.5s forwards; 
+}
+
+.splash-logo {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #4fc3f7; /* Warna cyan khas Hololive */
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    
+    /* Animasi popIn membuat teks muncul dari kecil ke besar (memantul) */
+    animation: popIn 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.splash-icon {
+    font-size: 2.5rem;
+    /* Animasi berputar */
+    animation: spinIcon 1s ease-in-out 0.8s forwards;
+}
+
+/* --- CSS KEYFRAMES (Aturan Animasi) --- */
+
+@keyframes popIn {
+    0% { transform: scale(0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes spinIcon {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); color: #1e88e5; }
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; visibility: visible; }
+    100% { opacity: 0; visibility: hidden; } /* visibility: hidden Mencegah splash screen menutupi tombol setelah menghilang */
+}
+
+/* Styling Hero Section */
+#hero-section {
+    height: 80vh; 
+    min-height: 500px;
+    
+    /* Menggabungkan overlay gelap (warna navy transparan) dengan gambar */
+    /* Ganti 'hero-bg.jpg' dengan nama file gambar aslimu */
+    background-image: linear-gradient(rgba(10, 17, 40, 0.7), rgba(10, 17, 40, 0.8)), url('/img/wallpaper-hololive.webp');
+    background-size: cover; /* Memastikan gambar menutupi seluruh area */
+    background-position: center; /* Memposisikan gambar di tengah */
+    background-attachment: fixed; /* (Opsional) Membuat efek parallax saat di-scroll */
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px; 
+    margin-bottom: 50px; 
+    border-bottom: 4px solid #4fc3f7; 
+}
+
+.hero-content {
+    max-width: 800px;
+    animation: slideUpFade 0.8s ease-out 2.6s both;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    color: #ffffff; /* Mengubah teks menjadi putih agar kontras dengan latar gelap */
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Tambahan bayangan agar teks lebih menonjol */
+}
+
+.text-highlight {
+    color: #4fc3f7; 
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: #e0e0e0; /* Abu-abu sangat terang */
+    line-height: 1.8;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+}
+
+/* (Tombol .btn-hero tidak perlu diubah, tetap gunakan kode yang sebelumnya) */
+
+.btn-hero {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #4fc3f7;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 15px 35px;
+    border-radius: 50px; /* Membuat tombol lonjong sempurna */
+    box-shadow: 0 10px 20px rgba(79, 195, 247, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-hero:hover {
+    background-color: #29b6f6;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(79, 195, 247, 0.4);
+}
+
+/* Responsif untuk Layar HP */
+@media screen and (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    #hero-section {
+        height: 60vh;
+    }
+}
+
+/* Media Query untuk Responsif (Layar HP/Tab) */
+@media screen and (max-width: 768px) {
+    .talent-profile {
+        flex-direction: column; 
+    }
+
+    .talent-visual, 
+    .talent-info {
+        width: 100%; 
+    }
+
+    .talent-visual {
+        padding: 30px 20px;
+    }
+
+    .talent-info {
+        padding: 25px 20px;
+    }
+}
+
+/* Menghapus gaya lama (border dashed) jika kamu ingin kotaknya bersih */
+.portrait-box {
+    height: 300px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden; /* Mencegah ujung gambar keluar dari lengkungan border-radius */
+}
+
+/* Mengatur ukuran gambar agar pas dengan kontainer */
+.portrait-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Menjaga rasio gambar agar proporsional tanpa gepeng */
+    border-radius: 8px; /* Menyesuaikan lengkungan dengan portrait-box */
+}
+.portrait-box {
+    height: 300px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden; /* Mencegah ujung gambar keluar dari lengkungan border-radius */
+}
+
+/* Mengatur ukuran gambar agar pas dengan kontainer */
+.portrait-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Menjaga rasio gambar agar proporsional tanpa gepeng */
+    border-radius: 8px; /* Menyesuaikan lengkungan dengan portrait-box */
+}
+
+/* CSS Animations: Konten Slide Up */
+@keyframes slideUpFade {
+    0% {
+        opacity: 0;
+        transform: translateY(60px); /* Mulai dari 60px lebih rendah */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Kembali ke posisi normal */
+    }
+}
+
+@keyframes slideDownFade {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%); /* Posisi awal di luar batas atas layar */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Turun ke posisi normal */
+    }
+}
+
+/* footer */
+#holo-footer {
+    background-color: #0d1424; /* Biru sangat gelap (Navy) */
+    color: #ffffff; /* Teks putih */
+    padding: 50px 20px 20px; /* Padding atas 50px, kiri-kanan 20px, bawah 20px */
+    margin-top: 80px; /* Jarak dari konten terakhir di atasnya */
+    border-top: 4px solid #4fc3f7; /* Garis biru terang khas Hololive di bagian atas footer */
+    text-align: center;
+}
+
+.footer-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #4fc3f7;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.footer-links {
+    margin-bottom: 30px;
+}
+
+.footer-links a {
+    color: #a0aec0; /* Warna abu-abu kebiruan untuk link */
+    text-decoration: none;
+    margin: 0 15px; /* Jarak antar link */
+    font-size: 0.95rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff; /* Berubah jadi putih menyala saat di-hover */
+}
+
+.footer-copyright {
+    border-top: 1px solid #2d3748; /* Garis pemisah tipis */
+    padding-top: 20px;
+    font-size: 0.85rem;
+    color: #718096; /* Warna teks lebih redup untuk hak cipta */
+}
+
+/* Responsif untuk Layar HP */
+@media screen and (max-width: 768px) {
+    .footer-links a {
+        display: block; /* Menjadikan link menyusun ke bawah di HP */
+        margin: 10px 0;
+    }
+}
